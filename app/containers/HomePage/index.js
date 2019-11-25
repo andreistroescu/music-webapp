@@ -21,6 +21,13 @@ import oasis from '../../images/albums/oasis.jpg';
 import theBeatles from '../../images/albums/theBeatles.jpg';
 // import the_velvet_underground from '../../images/albums/the_velvet_underground.jpg';
 
+import album1 from '../../images/albums/album1.jpg';
+import album2 from '../../images/albums/album2.jpg';
+import album3 from '../../images/albums/album3.jpg';
+import album4 from '../../images/albums/album4.jpg';
+import album5 from '../../images/albums/album5.jpg';
+import album6 from '../../images/albums/album6.jpg';
+
 const HomePage = () => (
   <div className="app">
     <div className="sidebar">
@@ -142,51 +149,29 @@ const HomePage = () => (
           <img src={theBeatles} alt="icon" />
         </div>
       </div>
-      <div className="category">
-        <div className="title title-suggested">Suggested New Tracks</div>
-        <div className="table">
-          <div className="table__row">
-            <div className="table__cell">
-              <span className="table__title">A</span>
-              <i className="table__badge">A</i>
-            </div>
-          </div>
-          <div className="table__row">
-            <div className="table__cell">
-              <span className="table__title">A</span>
-              <i className="table__badge">A</i>
-            </div>
-          </div>
-          <div className="table__row">
-            <div className="table__cell">
-              <span className="table__title">A</span>
-              <i className="table__badge">A</i>
-            </div>
-          </div>
-          <div className="table__row">
-            <div className="table__cell">
-              <span className="table__title">A</span>
-              <i className="table__badge">A</i>
-            </div>
-          </div>
-          <div className="table__row">
-            <div className="table__cell">
-              <span className="table__title">A</span>
-              <i className="table__badge">A</i>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div className="title title-mixes">Mixes For You</div>
       <div className="category">
-        <div className="category__item item-small" />
-        <div className="category__item item-small" />
-        <div className="category__item item-small" />
-        <div className="category__item item-small" />
-        <div className="category__item item-small" />
-        <div className="category__item item-small" />
-        <div className="category__item item-small" />
+        <div className="category__item item-small">
+          <img src={album1} alt="smaller-icon" />
+        </div>
+        <div className="category__item item-small">
+          <img src={album2} alt="smaller-icon" />
+        </div>
+        <div className="category__item item-small">
+          <img src={album3} alt="smaller-icon" />
+        </div>
+        <div className="category__item item-small">
+          <img src={album4} alt="smaller-icon" />
+        </div>
+        <div className="category__item item-small">
+          <img src={album5} alt="smaller-icon" />
+        </div>
+        <div className="category__item item-small">
+          <img src={album6} alt="smaller-icon" />
+        </div>
       </div>
+
       <div className="title title-recent">Recently Played</div>
       <div className="category">
         <div className="category__item" />
@@ -198,6 +183,18 @@ const HomePage = () => (
         <div className="category__item" />
         <div className="category__item" />
         <div className="category__item" />
+      </div>
+
+      <div className="category">
+        <div className="title title-suggested">Suggested New Tracks</div>
+        <div className="table">
+          <div className="table__row">
+            <div className="table__cell">
+              <span className="table__title">A</span>
+              <i className="table__badge">A</i>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
