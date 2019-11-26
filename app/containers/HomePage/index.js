@@ -1,6 +1,6 @@
 import React from 'react';
-import './style.css';
 
+// ICONS
 import add from '../../images/icons/add_icon.png';
 import albums from '../../images/icons/albums_icon.png';
 import artists from '../../images/icons/artists_icon.png';
@@ -13,6 +13,7 @@ import playlists from '../../images/icons/playlists_icon.png';
 import songs from '../../images/icons/songs_icon.png';
 import videos from '../../images/icons/videos_icon.png';
 
+// ALBUMS
 import bowie from '../../images/albums/bowie.jpg';
 import clash from '../../images/albums/clash.jpg';
 import jeffersonairplane from '../../images/albums/jeffersonairplane.jpg';
@@ -20,7 +21,6 @@ import ledZeppelin from '../../images/albums/ledZeppelin.jpg';
 import oasis from '../../images/albums/oasis.jpg';
 import theBeatles from '../../images/albums/theBeatles.jpg';
 // import the_velvet_underground from '../../images/albums/the_velvet_underground.jpg';
-
 import album1 from '../../images/albums/album1.jpg';
 import album2 from '../../images/albums/album2.jpg';
 import album3 from '../../images/albums/album3.jpg';
@@ -28,11 +28,14 @@ import album4 from '../../images/albums/album4.jpg';
 import album5 from '../../images/albums/album5.jpg';
 import album6 from '../../images/albums/album6.jpg';
 
+import './style.css';
+
 const HomePage = () => (
   <div className="app">
     <div className="sidebar">
       <div className="section">
         <h5 className="section-title">
+          {/* this should be done with spans and a container div for the icon */}
           ACCOUNT
           <img className="title__image" src={more} alt="icon" />
         </h5>
@@ -48,6 +51,7 @@ const HomePage = () => (
         </div>
       </div>
 
+      {/* not enough specificity for the class name */}
       <div className="section">
         <h5 className="section-title">MY COLLECTION</h5>
         <div className="section-item">
@@ -97,7 +101,7 @@ const HomePage = () => (
           <span>
             <img className="section__image" src={add} alt="icon" />
           </span>
-          <span>Create ne...</span>
+          <span>Create ne...</span> {/* css ellipsis */}
         </div>
         <div className="section-item">
           <span>Smoky Dishes</span>
@@ -119,7 +123,9 @@ const HomePage = () => (
         </div>
       </div>
     </div>
+
     <div className="main-page">
+      {/* differentiate between the top section and the rest of the section */}
       <div className="search-bar">
         <input
           type="search"
@@ -128,6 +134,10 @@ const HomePage = () => (
           align="right"
         />
       </div>
+
+      {/* add another wrapper for the rest of the section */}
+
+      {/* add a wrapper div for each section: title + category */}
       <div className="title title-featured">Featured</div>
       <div className="category">
         <div className="category__item item-large">
@@ -194,6 +204,22 @@ const HomePage = () => (
               <i className="table__badge">A</i>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="table-container">
+        <div className="flex-table header" role="rowgroup" />
+        <div className="flex-row first" role="columnheader">
+          Title
+        </div>
+        <div className="flex-row" role="columnheader">
+          Artist
+        </div>
+        <div className="flex-row" role="columnheader">
+          Album
+        </div>
+        <div className="flex-row" role="columnheader">
+          Time
         </div>
       </div>
     </div>

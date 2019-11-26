@@ -5,11 +5,16 @@
   justify-content: flex-start;
   align-content: stretch;
   align-items: stretch;
+
   width: 100%;
   height: 100%;
+
   position: fixed;
-  letter-spacing: 0.6px;
+
   font-size: 14px;
+  letter-spacing: 0.6px;
+
+  /* FONT declaration are missing (https://css-tricks.com/snippets/css/system-font-stack/) */
 }
 
 .sidebar {
@@ -21,15 +26,20 @@
   overflow: auto;
 }
 
-.section {
+/* more specificity is better */
+.sidebar .section {
+  /* this is better renamed to only margin-top */
   margin: 32px 0 0;
 }
 
 .title__image {
   height: 16px;
   width: 16px;
-  filter: invert(100%);
+
   float: right;
+
+  /* don't use filter - use the image color directly */
+  filter: invert(100%);
 }
 
 .section-title {
@@ -39,6 +49,7 @@
 }
 
 .section-item {
+  /* use px instead of rem */
   height: 3rem;
   display: flex;
   align-items: center;
