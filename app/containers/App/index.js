@@ -12,6 +12,12 @@ import { Link, Route, Switch } from 'react-router-dom';
 import HomePage from 'containers/HomePage';
 import Explore from 'containers/Explore';
 import GlobalStyle from '../../global-styles';
+import MyMix from '../../components/MyMix/index';
+import Playlists from '../../components/Playlists/index';
+import Albums from '../../components/Albums/index';
+import Tracks from '../../components/Tracks/index';
+import Videos from '../../components/Videos/index';
+import Artists from '../../components/Artists/index';
 
 import add from '../../images/icons/add_icon.png';
 import albums from '../../images/icons/albums_icon.png';
@@ -145,12 +151,12 @@ export default function App() {
             <Switch>
               <Route path="/home" component={HomePage} />
               <Route path="/explore" component={Explore} />
-              {/* <Route path="/myMix" component={MyMix} />
+              <Route path="/myMix" component={MyMix} />
               <Route path="/playlists" component={Playlists} />
               <Route path="/albums" component={Albums} />
               <Route path="/tracks" component={Tracks} />
               <Route path="/videos" component={Videos} />
-              <Route path="/artists" component={Artists} /> */}
+              <Route path="/artists" component={Artists} />
             </Switch>
             <GlobalStyle />
           </div>
